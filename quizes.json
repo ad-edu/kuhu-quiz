@@ -1,14 +1,6 @@
 [
-    {
-        "name": "Science Quiz - Chapter -1",
-        "quizData": "quiz_data_1.json"
-    },
-    {
-        "name": "Science Quiz - Chapter -2",
-        "quizData": "quiz_data_2.json"
-    },
-    {
-        "name": "Science Quiz - Chapter -3",
-        "quizData": "quiz_data_3.json"
+	{
+        "name": "Science Quiz - Chapter -4",
+        "quizData": "quiz_data_4.json"
     }
 ]

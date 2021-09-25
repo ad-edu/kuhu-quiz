@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web:900|Roboto:400,100);
 
-body { background: #000 url(../images/background1.jpg) ; }
+body { background: #000 url(../images/background.jpg) ; }
 
 #myQuiz {
    font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 400;
@@ -83,7 +83,7 @@ body { background: #000 url(../images/background1.jpg) ; }
 
 #myQuiz .progress {
    position: absolute;
-   top: 200px;
+   top: 210px;
    left: 40px;
    width: 550px;
 }
@@ -124,7 +124,7 @@ body { background: #000 url(../images/background1.jpg) ; }
 
 #myQuiz .intro {
    position: absolute;
-   top: 225px;
+   top: 200px;
    left: 660px;
    width: 550px;
 }
@@ -136,7 +136,7 @@ body { background: #000 url(../images/background1.jpg) ; }
 #myQuiz .question{
    width: 800px;
    position: absolute;
-   top: 225px;
+   top: 250px;
    left: 800px;
 }
 

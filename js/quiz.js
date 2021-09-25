@@ -12,6 +12,10 @@
 
         $scope.selectQuiz = function (selectedQuiz) {
 
+            const ans= angular.lowercase("JHGgjgREWWRWRW");
+
+            console.log(ans);
+
             $scope.score = 0;
             $scope.activeQuestion = -1;
             $scope.sectionIndex = 0;
@@ -50,7 +54,7 @@
                     $scope.totalFillBlankQuestions = $scope.fillBlankQuestions.length;
                     $scope.totalQuestions = $scope.totalQuestions + $scope.totalFillBlankQuestions;
                     $scope.fillBlankQuestions.forEach(function splitQuestion(value, index, array) {
-                        const myArr = value.question.split("[FILL_IN_THE_BLANK]");
+                        const myArr = value.question.split("[]");
                         $scope.fillBlankQuestions[index].questionPart1 = myArr[0];
                         $scope.fillBlankQuestions[index].questionPart2 = myArr[1];
                     });
@@ -113,9 +117,12 @@
                 var correctAnswer = $scope.oneWordQuestions[qIndex].answer;
                 $scope.oneWordQuestions[qIndex].correctAnswer = correctAnswer;
 
-                const possibleAnswers = correctAnswer.split("|");
+                const possibleAnswers = angular.lowercase(correctAnswer).split("|");
 
-                if (possibleAnswers.includes(answer)) {
+                console.log(possibleAnswers);
+                console.log(angular.lowercase(answer));
+
+                if (possibleAnswers.includes(angular.lowercase(answer))) {
                     $scope.oneWordQuestions[qIndex].correctness = 'correct';
                     $scope.score += 1;
                 }
@@ -147,9 +154,9 @@
                 var correctAnswer = $scope.fillBlankQuestions[qIndex].answer;
                 $scope.fillBlankQuestions[qIndex].correctAnswer = correctAnswer;
 
-                const possibleAnswers = correctAnswer.split("|");
+                const possibleAnswers = angular.lowercase(correctAnswer).split("|");
                 
-                if (possibleAnswers.includes(answer)) {
+                if (possibleAnswers.includes(angular.lowercase(answer))) {
 
                     $scope.fillBlankQuestions[qIndex].correctness = 'correct';
                     $scope.score += 1;
