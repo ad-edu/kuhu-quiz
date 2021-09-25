@@ -57,11 +57,11 @@
     {
       "question": "If the leaf has parallel veins ,what venetion it has?",
       "answer": "Reticulate",
-      "feedback": "The correct answer is Reticulate Venetion"
+      "feedback": "The correct answer is Reticulate"
     },
     {
       "question": "Extreme cold places are called?",
-      "answer": "Frigid Zone",
+      "answer": "Frigid|Frigid Zone",
       "feedback": "The correct answer is Frigid Zone"
     }
   ],
