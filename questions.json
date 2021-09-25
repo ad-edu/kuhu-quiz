@@ -1,0 +1,80 @@
+{
+  "quizTitle": "Science Quiz - Series 1",
+  "sections": [
+    "mcqQuestions",
+    "oneWordQuestions",
+    "fillBlankQuestions"
+  ],
+  "mcqQuestions": [
+    {
+      "question": "What is the height of Mount Everest?",
+      "answers": [
+        {
+          "id": 1,
+          "text": "8848 meters"
+        },
+        {
+          "id": 2,
+          "text": "8890 meters"
+        },
+        {
+          "id": 3,
+          "text": "7887 meters"
+        },
+        {
+          "id": 4,
+          "text": "7886 meters"
+        }
+      ],
+      "correct": 0,
+      "feedback": "The correct answer is 8848 meters"
+    },
+    {
+      "question": "Which mountain range separates Europe and Asia?",
+      "answers": [
+        {
+          "id": 1,
+          "text": "Andes"
+        },
+        {
+          "id": 2,
+          "text": "Himalayas"
+        },
+        {
+          "id": 3,
+          "text": "Ural"
+        },
+        {
+          "id": 4,
+          "text": "Alps"
+        }
+      ],
+      "correct": 2,
+      "feedback": "The correct answer is Ural Mountains"
+    }
+  ],
+  "oneWordQuestions": [
+    {
+      "question": "If the leaf has parallel veins ,what venetion it has?",
+      "answer": "Reticulate",
+      "feedback": "The correct answer is Reticulate"
+    },
+    {
+      "question": "Extreme cold places are called?",
+      "answer": "Frigid|Frigid Zone",
+      "feedback": "The correct answer is Frigid Zone"
+    }
+  ],
+  "fillBlankQuestions": [
+    {
+      "question": "Sun rises in the [] direction?",
+      "answer": "East|east",
+      "feedback": "The correct answer is East"
+    },
+    {
+      "question": "[] is the largest planet of solar system",
+      "answer": "Jupiter|jupiter",
+      "feedback": "The correct answer is Jupiter"
+    }
+  ]
+}
