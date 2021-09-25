@@ -12,10 +12,6 @@
 
         $scope.selectQuiz = function (selectedQuiz) {
 
-            const ans= angular.lowercase("JHGgjgREWWRWRW");
-
-            console.log(ans);
-
             $scope.score = 0;
             $scope.activeQuestion = -1;
             $scope.sectionIndex = 0;
