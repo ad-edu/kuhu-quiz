@@ -91,12 +91,12 @@
   "fillBlankQuestions": [
     {
       "question": "Sun rises in the [] direction?",
-      "answer": "East~east",
+      "answer": "East|east",
       "feedback": "The correct answer is East"
     },
     {
       "question": "[] is the largest planet of solar system",
-      "answer": "Jupiter~jupiter",
+      "answer": "Jupiter|jupiter",
       "feedback": "The correct answer is Jupiter"
     }
   ]
