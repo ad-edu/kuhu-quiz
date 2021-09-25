@@ -1,0 +1,10 @@
+git add .
+
+git status
+
+git commit -m "my commits"
+
+git commit
+
+git push
+

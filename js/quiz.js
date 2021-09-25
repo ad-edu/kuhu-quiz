@@ -36,17 +36,17 @@
                 $scope.oneWordQuestions = quizData.data.oneWordQuestions;
                 $scope.fillBlankQuestions = quizData.data.fillBlankQuestions;
 
-                if ($scope.mcqQuestions != undefined) {
+                if ($scope.mcqQuestions != undefined && $scope.sections.includes("mcqQuestions")) {
                     $scope.totalMCQQuestions = $scope.mcqQuestions.length;
                     $scope.totalQuestions = $scope.totalQuestions + $scope.totalMCQQuestions;
                 }
 
-                if ($scope.oneWordQuestions != undefined) {
+                if ($scope.oneWordQuestions != undefined && $scope.sections.includes("oneWordQuestions") ) {
                     $scope.totalOneWordQuestions = $scope.oneWordQuestions.length;
                     $scope.totalQuestions = $scope.totalQuestions + $scope.totalOneWordQuestions;
                 }
 
-                if ($scope.fillBlankQuestions != undefined) {
+                if ($scope.fillBlankQuestions != undefined && $scope.sections.includes("fillBlankQuestions") ) {
                     $scope.totalFillBlankQuestions = $scope.fillBlankQuestions.length;
                     $scope.totalQuestions = $scope.totalQuestions + $scope.totalFillBlankQuestions;
                     $scope.fillBlankQuestions.forEach(function splitQuestion(value, index, array) {
@@ -114,9 +114,6 @@
                 $scope.oneWordQuestions[qIndex].correctAnswer = correctAnswer;
 
                 const possibleAnswers = angular.lowercase(correctAnswer).split("|");
-
-                console.log(possibleAnswers);
-                console.log(angular.lowercase(answer));
 
                 if (possibleAnswers.includes(angular.lowercase(answer))) {
                     $scope.oneWordQuestions[qIndex].correctness = 'correct';
