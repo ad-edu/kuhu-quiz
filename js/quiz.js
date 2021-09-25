@@ -2,7 +2,7 @@
 
     var app = angular.module('myQuiz', []);
 
-    app.controller('QuizController', ['$scope', '$http', '$sce', function ($scope, $http, $sce) {
+    app.controller('QuizController', ['$scope', '$http', '$sce', '$timeout', function ($scope, $http, $sce, $timeout) {
 
         $scope.quizes = null;
 
@@ -11,13 +11,16 @@
         });
 
         $scope.selectQuiz = function (selectedQuiz) {
-
+            $scope.counter = 0;
+            $scope.timeLeft = '';
             $scope.score = 0;
             $scope.activeQuestion = -1;
             $scope.sectionIndex = 0;
             $scope.percentage = 0;
             $scope.quizTitle = '';
+            $scope.quizTime = 10;
             $scope.quizStartStatus = false;
+            $scope.quizTimeExpired = false;
 
             $scope.currentMCQQuestion = 0;
             $scope.currentOneWordQuestion = 0;
@@ -32,6 +35,15 @@
             $http.get(selectedQuiz).then(function (quizData) {
                 $scope.sections = quizData.data.sections;
                 $scope.quizTitle = quizData.data.quizTitle;
+                $scope.quizTime = quizData.data.quizTime;
+                if ($scope.quizTime != undefined) {
+                    $scope.counter = $scope.quizTime * 60;
+                    $scope.minutes = Math.floor($scope.counter / 60);
+                    $scope.seconds = (($scope.counter % 60));
+                    $scope.timeLeft ='['+ $scope.minutes + ':' + $scope.seconds+']';
+                }
+
+
                 $scope.mcqQuestions = quizData.data.mcqQuestions;
                 $scope.oneWordQuestions = quizData.data.oneWordQuestions;
                 $scope.fillBlankQuestions = quizData.data.fillBlankQuestions;
@@ -41,12 +53,12 @@
                     $scope.totalQuestions = $scope.totalQuestions + $scope.totalMCQQuestions;
                 }
 
-                if ($scope.oneWordQuestions != undefined && $scope.sections.includes("oneWordQuestions") ) {
+                if ($scope.oneWordQuestions != undefined && $scope.sections.includes("oneWordQuestions")) {
                     $scope.totalOneWordQuestions = $scope.oneWordQuestions.length;
                     $scope.totalQuestions = $scope.totalQuestions + $scope.totalOneWordQuestions;
                 }
 
-                if ($scope.fillBlankQuestions != undefined && $scope.sections.includes("fillBlankQuestions") ) {
+                if ($scope.fillBlankQuestions != undefined && $scope.sections.includes("fillBlankQuestions")) {
                     $scope.totalFillBlankQuestions = $scope.fillBlankQuestions.length;
                     $scope.totalQuestions = $scope.totalQuestions + $scope.totalFillBlankQuestions;
                     $scope.fillBlankQuestions.forEach(function splitQuestion(value, index, array) {
@@ -61,6 +73,11 @@
         }
 
         $scope.startTest = function () {
+
+            if (!$scope.quizStartStatus && $scope.counter >0 ) {
+
+                $scope.countdown();
+            }
             $scope.activeQuestion = 0;
             $scope.quizStartStatus = true;
         }
@@ -129,7 +146,6 @@
         }
 
         $scope.selectOneWordContinue = function () {
-
             if ($scope.totalOneWordQuestions === $scope.currentOneWordQuestion) {
                 $scope.sectionIndex += 1;
                 $scope.activeQuestion = -1;
@@ -148,7 +164,7 @@
                 $scope.fillBlankQuestions[qIndex].correctAnswer = correctAnswer;
 
                 const possibleAnswers = angular.lowercase(correctAnswer).split("|");
-                
+
                 if (possibleAnswers.includes(angular.lowercase(answer))) {
 
                     $scope.fillBlankQuestions[qIndex].correctness = 'correct';
@@ -171,6 +187,21 @@
             $scope.totalAttemptedQuestions += 1;
             return $scope.activeQuestion += 1;
         }
+
+
+        $scope.countdown = function () {
+            stopped = $timeout(function () {
+                $scope.minutes = Math.floor($scope.counter / 60);
+                $scope.seconds = (($scope.counter % 60));
+                $scope.timeLeft ='['+ $scope.minutes + ':' + $scope.seconds+']';
+                $scope.counter--;
+                $scope.countdown();
+            }, 1000);
+            if ($scope.counter <= -1) {
+                $timeout.cancel(stopped);
+                $scope.quizTimeExpired = true;
+            }
+        };
 
     }]);
 })();

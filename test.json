@@ -1,6 +1,6 @@
 {
   "quizTitle": "Science Quiz - Series 1",
-  "quizTime": "0.25",
+  "quizTime": "60",
   "sections": [
     "mcqQuestions",
     "oneWordQuestions",
