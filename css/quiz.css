@@ -134,7 +134,7 @@ body { background: #000 url(../images/background.jpg) ; }
 /* Questions */
 
 #myQuiz .question{
-   width: 800px;
+   width: 700px;
    position: absolute;
    top: 250px;
    left: 800px;
