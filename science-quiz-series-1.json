@@ -1,5 +1,5 @@
 {
-  "quizTitle": "Science Quiz - Chapter -2",
+  "quizTitle": "Science Quiz - Series 1",
   "sections": [
     "mcqQuestions",
     "oneWordQuestions",
@@ -51,36 +51,13 @@
       ],
       "correct": 2,
       "feedback": "The correct answer is Ural Mountains"
-    },
-    {
-      "question": "Which mountain range separates Europe and Asia",
-      "answers": [
-        {
-          "id": 1,
-          "image": "images/close_up_01.jpg"
-        },
-        {
-          "id": 2,
-          "image": "images/close_up_02.jpg"
-        },
-        {
-          "id": 3,
-          "image": "images/close_up_03.jpg"
-        },
-        {
-          "id": 4,
-          "image": "images/close_up_05.jpg"
-        }
-      ],
-      "correct": 3,
-      "feedback": ""
     }
   ],
   "oneWordQuestions": [
     {
       "question": "If the leaf has parallel veins ,what venetion it has?",
       "answer": "Reticulate",
-      "feedback": "The correct answer is Reticulate"
+      "feedback": "The correct answer is Reticulate Venetion"
     },
     {
       "question": "Extreme cold places are called?",
@@ -91,12 +68,12 @@
   "fillBlankQuestions": [
     {
       "question": "Sun rises in the [] direction?",
-      "answer": "East|east",
+      "answer": "East~east",
       "feedback": "The correct answer is East"
     },
     {
       "question": "[] is the largest planet of solar system",
-      "answer": "Jupiter|jupiter",
+      "answer": "Jupiter~jupiter",
       "feedback": "The correct answer is Jupiter"
     }
   ]

@@ -1,9 +1,8 @@
 TYPE	QUESTION	FEEDBACK	ANSWER	OPTION-TYPE	OPTION-1	OPTION-2	OPTION-3	OPTION-4
-TITLE	Science Quiz - Chapter -2							
+TITLE	Science Quiz - Series 1							
 MCQ	What is the height of Mount Everest?	The correct answer is 8848 meters	0	TEXT	8848 meters	8890 meters	7887 meters	7886 meters
 MCQ	Which mountain range separates Europe and Asia?	The correct answer is Ural Mountains	2	TEXT	Andes	Himalayas	Ural	Alps
-MCQ	Which mountain range separates Europe and Asia		3	IMAGE	images/close_up_01.jpg	images/close_up_02.jpg	images/close_up_03.jpg	images/close_up_05.jpg
 OWQ	"If the leaf has parallel veins ,what venetion it has?"	The correct answer is Reticulate Venetion	Reticulate					
-FBQ	Sun rises in the [] direction?	The correct answer is East	East~east					
-FBQ	[] is the largest planet of solar system	The correct answer is Jupiter	Jupiter~jupiter					
+FBQ	Sun rises in the [] direction?	The correct answer is East	East|east					
+FBQ	[] is the largest planet of solar system	The correct answer is Jupiter	Jupiter|jupiter					
 OWQ	Extreme cold places are called?	The correct answer is Frigid Zone	Frigid Zone					
