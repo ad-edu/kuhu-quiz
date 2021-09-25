@@ -1,0 +1,474 @@
+{
+  "quizTitle": "Science Quiz - Chapter -3",
+  "sections": ["oneWordQuestions","mcqQuestions"],
+  "mcqQuestions": [
+    {
+      "question": "Which image shows a close-up of Saturn?",
+      "answers": [
+        {
+          "id": 0,
+          "image": "images/close_up_01.jpg"
+        },
+        {
+          "id": 1,
+          "image": "images/close_up_02.jpg"
+        },
+        {
+          "id": 2,
+          "image": "images/close_up_03.jpg"
+        },
+        {
+          "id": 3,
+          "image": "images/close_up_05.jpg"
+        }
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the name of Saturn's largest moon?",
+      "answers": [
+        {
+          "id": 0,
+          "text": "Hercules"
+        },
+        {
+          "id": 1,
+          "text": "Europa"
+        },
+        {
+          "id": 2,
+          "text": "Goliath"
+        },
+        {
+          "id": 3,
+          "text": "Zeus"
+        },
+        {
+          "id": 4,
+          "text": "Titan"
+        },
+        {
+          "id": 5,
+          "text": "Triton"
+        }
+      ],
+      "correct": 4,
+      "feedback": "Though the names seem similar, Triton orbits the planet Neptune."
+    },
+    {
+      "question": "What is the name of Saturn's largest moon?",
+      "answers": [
+        {
+          "id": 0,
+          "text": "Hercules"
+        },
+        {
+          "id": 1,
+          "text": "Europa"
+        },
+        {
+          "id": 2,
+          "text": "Goliath"
+        },
+        {
+          "id": 3,
+          "text": "Zeus"
+        },
+        {
+          "id": 4,
+          "text": "Titan"
+        },
+        {
+          "id": 5,
+          "text": "Triton"
+        }
+      ],
+      "correct": 4,
+      "feedback": "Though the names seem similar, Triton orbits the planet Neptune."
+    },
+    {
+      "question": "What is the name of Saturn's largest moon?",
+      "answers": [
+        {
+          "id": 0,
+          "text": "Hercules"
+        },
+        {
+          "id": 1,
+          "text": "Europa"
+        },
+        {
+          "id": 2,
+          "text": "Goliath"
+        },
+        {
+          "id": 3,
+          "text": "Zeus"
+        },
+        {
+          "id": 4,
+          "text": "Titan"
+        },
+        {
+          "id": 5,
+          "text": "Triton"
+        }
+      ],
+      "correct": 4,
+      "feedback": "Though the names seem similar, Triton orbits the planet Neptune."
+    },
+    {
+      "question": "What is the name of Saturn's largest moon?",
+      "answers": [
+        {
+          "id": 0,
+          "text": "Hercules"
+        },
+        {
+          "id": 1,
+          "text": "Europa"
+        },
+        {
+          "id": 2,
+          "text": "Goliath"
+        },
+        {
+          "id": 3,
+          "text": "Zeus"
+        },
+        {
+          "id": 4,
+          "text": "Titan"
+        },
+        {
+          "id": 5,
+          "text": "Triton"
+        }
+      ],
+      "correct": 4,
+      "feedback": "Though the names seem similar, Triton orbits the planet Neptune."
+    },
+    {
+      "question": "What is the name of Saturn's largest moon?",
+      "answers": [
+        {
+          "id": 0,
+          "text": "Hercules"
+        },
+        {
+          "id": 1,
+          "text": "Europa"
+        },
+        {
+          "id": 2,
+          "text": "Goliath"
+        },
+        {
+          "id": 3,
+          "text": "Zeus"
+        },
+        {
+          "id": 4,
+          "text": "Titan"
+        },
+        {
+          "id": 5,
+          "text": "Triton"
+        }
+      ],
+      "correct": 4,
+      "feedback": "Though the names seem similar, Triton orbits the planet Neptune."
+    },
+    {
+      "question": "What is the name of Saturn's largest moon?",
+      "answers": [
+        {
+          "id": 0,
+          "text": "Hercules"
+        },
+        {
+          "id": 1,
+          "text": "Europa"
+        },
+        {
+          "id": 2,
+          "text": "Goliath"
+        },
+        {
+          "id": 3,
+          "text": "Zeus"
+        },
+        {
+          "id": 4,
+          "text": "Titan"
+        },
+        {
+          "id": 5,
+          "text": "Triton"
+        }
+      ],
+      "correct": 4,
+      "feedback": "Though the names seem similar, Triton orbits the planet Neptune."
+    },
+    {
+      "question": "What is the name of Saturn's largest moon?",
+      "answers": [
+        {
+          "id": 0,
+          "text": "Hercules"
+        },
+        {
+          "id": 1,
+          "text": "Europa"
+        },
+        {
+          "id": 2,
+          "text": "Goliath"
+        },
+        {
+          "id": 3,
+          "text": "Zeus"
+        },
+        {
+          "id": 4,
+          "text": "Titan"
+        },
+        {
+          "id": 5,
+          "text": "Triton"
+        }
+      ],
+      "correct": 4,
+      "feedback": "Though the names seem similar, Triton orbits the planet Neptune."
+    },
+    {
+      "question": "What is the name of Saturn's largest moon?",
+      "answers": [
+        {
+          "id": 0,
+          "text": "Hercules"
+        },
+        {
+          "id": 1,
+          "text": "Europa"
+        },
+        {
+          "id": 2,
+          "text": "Goliath"
+        },
+        {
+          "id": 3,
+          "text": "Zeus"
+        },
+        {
+          "id": 4,
+          "text": "Titan"
+        },
+        {
+          "id": 5,
+          "text": "Triton"
+        }
+      ],
+      "correct": 4,
+      "feedback": "Though the names seem similar, Triton orbits the planet Neptune."
+    },
+    {
+      "question": "What is the name of Saturn's largest moon?",
+      "answers": [
+        {
+          "id": 0,
+          "text": "Hercules"
+        },
+        {
+          "id": 1,
+          "text": "Europa"
+        },
+        {
+          "id": 2,
+          "text": "Goliath"
+        },
+        {
+          "id": 3,
+          "text": "Zeus"
+        },
+        {
+          "id": 4,
+          "text": "Titan"
+        },
+        {
+          "id": 5,
+          "text": "Triton"
+        }
+      ],
+      "correct": 4,
+      "feedback": "Though the names seem similar, Triton orbits the planet Neptune."
+    },
+    {
+      "question": "What is the name of Saturn's largest moon?",
+      "answers": [
+        {
+          "id": 0,
+          "text": "Hercules"
+        },
+        {
+          "id": 1,
+          "text": "Europa"
+        },
+        {
+          "id": 2,
+          "text": "Goliath"
+        },
+        {
+          "id": 3,
+          "text": "Zeus"
+        },
+        {
+          "id": 4,
+          "text": "Titan"
+        },
+        {
+          "id": 5,
+          "text": "Triton"
+        }
+      ],
+      "correct": 4,
+      "feedback": "Though the names seem similar, Triton orbits the planet Neptune."
+    },
+    {
+      "question": "What is the name of Saturn's largest moon?",
+      "answers": [
+        {
+          "id": 0,
+          "text": "Hercules"
+        },
+        {
+          "id": 1,
+          "text": "Europa"
+        },
+        {
+          "id": 2,
+          "text": "Goliath"
+        },
+        {
+          "id": 3,
+          "text": "Zeus"
+        },
+        {
+          "id": 4,
+          "text": "Titan"
+        },
+        {
+          "id": 5,
+          "text": "Triton"
+        }
+      ],
+      "correct": 4,
+      "feedback": "Though the names seem similar, Triton orbits the planet Neptune."
+    },
+    {
+      "question": "What is the name of Saturn's largest moon?",
+      "answers": [
+        {
+          "id": 0,
+          "text": "Hercules"
+        },
+        {
+          "id": 1,
+          "text": "Europa"
+        },
+        {
+          "id": 2,
+          "text": "Goliath"
+        },
+        {
+          "id": 3,
+          "text": "Zeus"
+        },
+        {
+          "id": 4,
+          "text": "Titan"
+        },
+        {
+          "id": 5,
+          "text": "Triton"
+        }
+      ],
+      "correct": 4,
+      "feedback": "Though the names seem similar, Triton orbits the planet Neptune."
+    },
+    {
+      "question": "What is the name of Saturn's largest moon?",
+      "answers": [
+        {
+          "id": 0,
+          "text": "Hercules"
+        },
+        {
+          "id": 1,
+          "text": "Europa"
+        },
+        {
+          "id": 2,
+          "text": "Goliath"
+        },
+        {
+          "id": 3,
+          "text": "Zeus"
+        },
+        {
+          "id": 4,
+          "text": "Titan"
+        },
+        {
+          "id": 5,
+          "text": "Triton"
+        }
+      ],
+      "correct": 4,
+      "feedback": "Though the names seem similar, Triton orbits the planet Neptune."
+    },
+    {
+      "question": "What is the name of Saturn's largest moon?",
+      "answers": [
+        {
+          "id": 0,
+          "text": "Hercules"
+        },
+        {
+          "id": 1,
+          "text": "Europa"
+        },
+        {
+          "id": 2,
+          "text": "Goliath"
+        },
+        {
+          "id": 3,
+          "text": "Zeus"
+        },
+        {
+          "id": 4,
+          "text": "Titan"
+        },
+        {
+          "id": 5,
+          "text": "Triton"
+        }
+      ],
+      "correct": 4,
+      "feedback": "Though the names seem similar, Triton orbits the planet Neptune."
+    }
+  ],
+  "oneWordQuestions":
+  [
+    {
+      "question": "Which image shows a close-up of Saturn?",
+      "answer": "hello|hi|gm",
+      "feedback": "Though the names seem similar, Triton orbits the planet Neptune."
+    },
+    {
+      "question": "Which image shows a close-up of Jupita?",
+      "answer": "hello"
+    }
+  ]
+}

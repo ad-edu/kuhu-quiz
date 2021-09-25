@@ -1,0 +1,182 @@
+﻿<!DOCTYPE HTML>
+<html ng-app="myQuiz">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Quiz</title>
+	<link rel="stylesheet" type="text/css" href="css/quiz.css">
+</head>
+<body>
+	
+<div id="myQuiz" ng-controller="QuizController">
+    <div>
+		<b>Select a Quiz to attempt</b>
+		<select ng-model="selectedQuiz" ng-change="selectQuiz(selectedQuiz)">
+			<option ng-repeat="quiz in quizes" value="{{quiz.quizData}}">{{quiz.name}}</option>
+		  </select>
+	</div>
+	<span >
+		<br />		
+	</span>
+	<hr>
+	<h1 class="txt">{{ quizTitle}}</h1>
+	<span >
+		<br />
+		<br />		
+	</span>
+	
+	<div ng-show="sections[sectionIndex] === 'mcqQuestions'">
+		<div>
+			<h4>Section {{sectionIndex+1}} - Please choose the correct option</h4>
+			<hr style="margin-left: 40px;"> 
+			<span >
+				<p></p>
+				<br />
+				<br />			
+			</span>
+		</div>	
+		<div class="progress">
+			<div class="
+			{{ ($index === activeQuestion) ? 'on' : 'off' }}
+			{{ (mcqQuestion.questionState === 'answered') ? 'answered' : 'unanswered' }}
+			{{ (mcqQuestion.correctness === 'correct') ? 'correct' : 'incorrect' }}"
+				 ng-repeat="mcqQuestion in mcqQuestions"></div>
+		</div>
+		
+		<div class="intro {{ (activeQuestion > -1)? 'inactive' : 'active' }}">
+			<span class="pull-left">
+				<br />
+				<br />
+				<br />	
+				<br />		
+			</span>
+			<p class="btn" ng-click="activeQuestion = 0">Begin</p>
+		</div>
+		<div class="question
+		{{ ($index === activeQuestion) ? 'active' : 'inactive' }}
+		{{ (mcqQuestion.questionState === 'answered') ? 'answered' : 'unanswered' }}"
+			 ng-repeat="mcqQuestion in mcqQuestions">
+			 <span class="pull-left">
+				<br />
+				<br />
+				<br />
+				<br />			
+			</span>
+			<p class="txt">{{ mcqQuestion.question }}</p>
+			<p class="ans"
+			   ng-class="{
+			   image: answer.image,
+			   selected:isMCQSelected($parent.$index, $index),
+			   correct: isMCQCorrect($parent.$index, $index) }"
+			   ng-style=" { 'background-image': 'url({{ answer.image }})' } "
+			   ng-click="selectMCQAnswer($parent.$index, $index)"
+			   ng-repeat="answer in mcqQuestion.answers">
+				{{ answer.text }}
+			</p>
+			<div class="feedback">
+				<p ng-show="mcqQuestion.correctness === 'correct'">You are <strong>correct</strong>.</p>
+				<p ng-show="mcqQuestion.correctness === 'incorrect'">Oops! That is not correct</p>
+				<p>{{ mcqQuestion.feedback }}</p>
+				<div class="btn" ng-click="selectMCQContinue()">Continue</div>
+			</div>
+		</div>
+	</div>
+
+	<div ng-show="sections[sectionIndex] === 'oneWordQuestions'">
+		<h4>Section {{sectionIndex+1}} - Please give one word answer</h4>
+		<hr style="margin-left: 40px;">
+		<div class="progress">
+			<div class="
+			{{ ($index === activeQuestion) ? 'on' : 'off' }}
+			{{ (oneWordQuestion.questionState === 'answered') ? 'answered' : 'unanswered' }}
+			{{ (oneWordQuestion.correctness === 'correct') ? 'correct' : 'incorrect' }}"
+				 ng-repeat="oneWordQuestion in oneWordQuestions"></div>
+		</div>
+		
+		<div class="intro {{ (activeQuestion > -1)? 'inactive' : 'active' }}">
+			<span class="pull-left">
+				<br />
+				<br />
+				<br />			
+			</span>
+			<p class="btn" ng-click="startTest()">Begin</p>
+		</div>
+		<div class="question
+		{{ ($index === activeQuestion) ? 'active' : 'inactive' }}
+		{{ (oneWordQuestion.questionState === 'answered') ? 'answered' : 'unanswered' }}"
+			 ng-repeat="oneWordQuestion in oneWordQuestions">
+			 <span class="pull-left">
+				<br />
+				<br />			
+			</span>
+			<p class="txt">{{ oneWordQuestion.question }}</p>
+			<input ng-model="owans" name="oneWordAnswer" size="30" placeholder="Enter your answer"/>
+			<p ng-show="oneWordQuestion.questionState != 'answered'" class="btn" ng-click="selectOneWordAnswer($index,owans)">Submit</p>
+			<br />
+			<div class="feedback">
+				<p ng-show="oneWordQuestion.correctness === 'correct'">You are <strong>correct</strong>.</p>
+				<p ng-show="oneWordQuestion.correctness === 'incorrect'">Oops! That is not correct</p>
+				<p>{{ oneWordQuestion.feedback }}</p>
+				<div class="btn" ng-click="selectOneWordContinue()">Continue</div>
+			</div>
+		</div>
+	</div>
+
+	<div ng-show="sections[sectionIndex] === 'fillBlankQuestions'">
+		<h4>Section {{sectionIndex+1}} - Fill in the blanks</h4>
+		<hr style="margin-left: 40px;">
+		<div class="progress">
+			<div class="
+			{{ ($index === activeQuestion) ? 'on' : 'off' }}
+			{{ (fillBlankQuestion.questionState === 'answered') ? 'answered' : 'unanswered' }}
+			{{ (fillBlankQuestion.correctness === 'correct') ? 'correct' : 'incorrect' }}"
+				 ng-repeat="fillBlankQuestion in fillBlankQuestions"></div>
+		</div>
+		
+		<div class="intro {{ (activeQuestion > -1)? 'inactive' : 'active' }}">
+			<span class="pull-left">
+				<br />
+				<br />
+				<br />			
+			</span>
+			<p class="btn" ng-click="startTest()">Begin</p>
+		</div>
+		<div class="question
+		{{ ($index === activeQuestion) ? 'active' : 'inactive' }}
+		{{ (fillBlankQuestion.questionState === 'answered') ? 'answered' : 'unanswered' }}"
+			 ng-repeat="fillBlankQuestion in fillBlankQuestions">
+			 <span class="pull-left">
+				<br />
+				<br />			
+			</span>
+			<span>
+			<p class="txt">{{ fillBlankQuestion.questionPart1 }} <input ng-model="owans" name="oneWordAnswer" size="30" placeholder="Fill the blank"/>{{ fillBlankQuestion.questionPart2 }}</p>
+					
+			<p ng-show="fillBlankQuestion.questionState != 'answered'" class="btn" ng-click="selectFillBlankAnswer($index,owans)">Submit</p>
+			</span>
+			<br />
+			<div class="feedback">
+				<p ng-show="fillBlankQuestion.correctness === 'correct'">You are <strong>correct</strong>.</p>
+				<p ng-show="fillBlankQuestion.correctness === 'incorrect'">Oops! That is not correct</p>
+				<p>{{ fillBlankQuestion.feedback }}</p>
+				<div class="btn" ng-click="selectfillBlankContinue()">Continue</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="results {{ ((totalQuestions === totalAttemptedQuestions) && quizStartStatus) ? 'active'  : 'inactive' }}">
+		<span class="pull-left">
+			<br />
+			<br />
+			<br />
+			<br />		
+		</span>
+		<h3>Results</h3>
+		<p>You scored {{percentage}}% by correctly answering {{score}} of the total {{totalQuestions}} questions.</p>
+	</div>
+</div>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/quiz.js"></script>
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>
