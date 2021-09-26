@@ -1,6 +1,6 @@
 TYPE	QUESTION	FEEDBACK	ANSWER	OPTION-TYPE	OPTION-1	OPTION-2	OPTION-3	OPTION-4
 TITLE	Science Quiz - Series 1							
-TIME	60							
+TIME	2							
 MCQ	What is the height of Mount Everest?	The correct answer is 8848 meters	0	TEXT	8848 meters	8890 meters	7887 meters	7886 meters
 MCQ	Which mountain range separates Europe and Asia?	The correct answer is Ural Mountains	2	TEXT	Andes	Himalayas	Ural	Alps
 OWQ	"If the leaf has parallel veins ,what venetion it has?"	The correct answer is Reticulate	Reticulate					
