@@ -14,6 +14,10 @@
 
     $uploadPath = $currentDirectory . $uploadDirectory . basename($fileName); 
 
+    $dirlist = getFileList($currentDirectory . $uploadDirectory );
+
+    echo "<pre>",print_r($dirlist),"</pre>";
+
     if (isset($_POST['submit'])) {
 
       if (! in_array($fileExtension,$fileExtensionsAllowed)) {
@@ -29,6 +33,7 @@
 
         if ($didUpload) {
           echo "The file " . basename($fileName) . " has been uploaded at".$uploadPath;
+
         } else {
           echo "An error occurred. Please contact the administrator.";
         }
