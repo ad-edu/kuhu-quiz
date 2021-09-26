@@ -1,1 +1,6 @@
-<?php include_once("home.html"); ?>
+<?php 
+phpinfo();
+
+//include_once("home.html"); 
+
+?>
