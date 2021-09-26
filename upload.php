@@ -14,11 +14,9 @@
 
     $uploadPath = $currentDirectory . $uploadDirectory . basename($fileName); 
 
-    echo $name.$email;
-
-    $dir=$currentDirectory . $uploadDirectory;
-    $dirlist = scandir($dir);
-    print_r($dirlist);
+   // $dir=$currentDirectory . $uploadDirectory;
+  //  $dirlist = scandir($dir);
+   // print_r($dirlist);
 
    // echo "<pre>",print_r($dirlist),"</pre>";
 
