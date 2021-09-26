@@ -14,12 +14,6 @@
 
     $uploadPath = $currentDirectory . $uploadDirectory . basename($fileName); 
 
-   // $dir=$currentDirectory . $uploadDirectory;
-  //  $dirlist = scandir($dir);
-   // print_r($dirlist);
-
-   // echo "<pre>",print_r($dirlist),"</pre>";
-
     if (isset($_POST['submit'])) {
 
       if (! in_array($fileExtension,$fileExtensionsAllowed)) {
