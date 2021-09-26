@@ -28,7 +28,7 @@
         $didUpload = move_uploaded_file($fileTmpName, $uploadPath);
 
         if ($didUpload) {
-          echo "The file " . basename($fileName) . " has been uploaded";
+          echo "The file " . basename($fileName) . " has been uploaded at".$uploadPath;
         } else {
           echo "An error occurred. Please contact the administrator.";
         }
