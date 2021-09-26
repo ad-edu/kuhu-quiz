@@ -6,7 +6,7 @@
 
         $scope.quizes = null;
 
-        $http.get('quizes.json').then(function (testData) {
+        $http.get('qbank/quizes.json').then(function (testData) {
             $scope.quizes = testData.data;
         });
 

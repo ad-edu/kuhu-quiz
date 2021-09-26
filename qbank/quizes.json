@@ -1,6 +1,6 @@
 [
 	{
         "name": "Science Quiz - Series 1",
-        "quizData": "science-quiz-series-1.json"
+        "quizData": "qbank/science-quiz-series-1.json"
     }
 ]

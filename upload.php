@@ -14,9 +14,6 @@
 
     $uploadPath = $currentDirectory . $uploadDirectory . basename($fileName); 
 
-    $name= $_GET["name"]; 
-    $email=$_GET["email"];
-
     echo $name.$email;
 
     $dir=$currentDirectory . $uploadDirectory;
