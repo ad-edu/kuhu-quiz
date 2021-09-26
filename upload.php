@@ -1,10 +1,10 @@
 <?php
     $currentDirectory = getcwd();
-    $uploadDirectory = "/uploads/";
+    $uploadDirectory = "/qbank/";
 
-    $errors = []; // Store errors here
+    $errors = []; 
 
-    $fileExtensionsAllowed = ['jpeg','jpg','png','json']; // These will be the only file extensions allowed 
+    $fileExtensionsAllowed = ['jpeg','jpg','png','json','txt'];  
 
     $fileName = $_FILES['the_file']['name'];
     $fileSize = $_FILES['the_file']['size'];
@@ -18,7 +18,7 @@
     $dirlist = scandir($dir);
     print_r($dirlist);
 
-    echo "<pre>",print_r($dirlist),"</pre>";
+   // echo "<pre>",print_r($dirlist),"</pre>";
 
     if (isset($_POST['submit'])) {
 
@@ -26,15 +26,15 @@
         $errors[] = "This file extension is not allowed. Please upload a valid file";
       }
 
-      if ($fileSize > 4000000) {
-        $errors[] = "File exceeds maximum size (4MB)";
+      if ($fileSize > 5000000) {
+        $errors[] = "File exceeds maximum size (5MB)";
       }
 
       if (empty($errors)) {
         $didUpload = move_uploaded_file($fileTmpName, $uploadPath);
 
         if ($didUpload) {
-          echo "The file " . basename($fileName) . " has been uploaded at".$uploadPath;
+          echo "The file " . basename($fileName) . " has been uploaded at ".$uploadPath;
 
         } else {
           echo "An error occurred. Please contact the administrator.";
