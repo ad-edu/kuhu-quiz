@@ -17,7 +17,7 @@
     $name= $_GET["name"]; 
     $email=$_GET["email"];
 
-    echo $name.$email
+    echo $name.$email;
 
     $dir=$currentDirectory . $uploadDirectory;
     $dirlist = scandir($dir);
