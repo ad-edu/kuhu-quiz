@@ -1,6 +1,6 @@
 <?php
     $currentDirectory = getcwd();
-    $uploadDirectory = "/qbank/";
+    $uploadDirectory = "/";
 
     $errors = []; 
 
