@@ -2,13 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PHP File Upload</title>
+    <title></title>
+    <style>
+      body {
+        background-color: linen;
+      }
+      
+      h1 {
+        color: maroon;
+        margin-left: 40px;
+      }
+    </style>
 </head>
 <body>
     <form action="upload.php" method="post" enctype="multipart/form-data">
-        Upload a File:
-        <input type="file" name="the_file" id="fileToUpload">
-        <input type="submit" name="submit" value="Start Upload">
+      <label class="file">
+        <input type="file" name="the_file" id="fileToUpload" aria-label="File browser example">
+        <span class="file-custom"><input type="submit" name="submit" value="Upload"></span>
+      </label>
     </form>
+    
 </body>
 </html>
