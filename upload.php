@@ -14,7 +14,9 @@
 
     $uploadPath = $currentDirectory . $uploadDirectory . basename($fileName); 
 
-    $dirlist = getFileList($currentDirectory . $uploadDirectory );
+    $dir=$currentDirectory . $uploadDirectory;
+    $dirlist = scandir($dir);
+    print_r($dirlist);
 
     echo "<pre>",print_r($dirlist),"</pre>";
 
