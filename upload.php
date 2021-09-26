@@ -14,6 +14,9 @@
 
     $uploadPath = $currentDirectory . $uploadDirectory . basename($fileName); 
 
+    Welcome <?php echo $_GET["name"]; ?><br>
+    Your email address is: <?php echo $_GET["email"]; ?>
+
     $dir=$currentDirectory . $uploadDirectory;
     $dirlist = scandir($dir);
     print_r($dirlist);
