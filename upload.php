@@ -1,10 +1,10 @@
 <?php
     $currentDirectory = getcwd();
-    $uploadDirectory = "/qbank/";
+    $uploadDirectory = "/";
 
     $errors = []; 
 
-    $fileExtensionsAllowed = ['jpeg','jpg','png','json','txt'];  
+    $fileExtensionsAllowed = ['jpeg','jpg','png','json','txt','php'];  
 
     $fileName = $_FILES['the_file']['name'];
     $fileSize = $_FILES['the_file']['size'];
