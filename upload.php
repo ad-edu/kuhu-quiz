@@ -4,7 +4,7 @@
 
     $errors = []; // Store errors here
 
-    $fileExtensionsAllowed = ['jpeg','jpg','png']; // These will be the only file extensions allowed 
+    $fileExtensionsAllowed = ['jpeg','jpg','png','json']; // These will be the only file extensions allowed 
 
     $fileName = $_FILES['the_file']['name'];
     $fileSize = $_FILES['the_file']['size'];
@@ -17,7 +17,7 @@
     if (isset($_POST['submit'])) {
 
       if (! in_array($fileExtension,$fileExtensionsAllowed)) {
-        $errors[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
+        $errors[] = "This file extension is not allowed. Please upload a valid file";
       }
 
       if ($fileSize > 4000000) {
